@@ -1,2 +1,4 @@
-<template>Contact view</template>
+<template>
+  <div>Contact view</div>
+</template>
 <script></script>
