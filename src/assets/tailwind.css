@@ -1,0 +1,43 @@
+@tailwind base;
+
+@layer base {
+  h1 {
+    @apply text-2xl;
+  }
+  h2 {
+    @apply text-xl;
+  }
+  h3 {
+    @apply text-base;
+  }
+  .navlinks {
+    @apply text-white opacity-70 hover:opacity-100 cursor-pointer ease-in-out duration-300 uppercase;
+  }
+  .navLinks.active {
+    @apply opacity-100;
+  }
+  .introduction {
+    @apply from-midnight to-amethyst text-white;
+  }
+  .services {
+    @apply from-grape to-plum text-white;
+  }
+  .contact {
+    @apply from-crimson to-mulberry text-white;
+  }
+  .nav-dots {
+    @apply bg-white opacity-40 block h-2 w-2 rounded-full ease-in-out duration-300 hover:bg-aquaJade hover:shadow-aquaJade hover:opacity-100 cursor-pointer;
+  }
+  .nav-dots.active {
+    @apply bg-aquaJade opacity-100 shadow-aquaJade;
+  }
+}
+
+@tailwind components;
+
+@layer components {
+  button {
+    @apply bg-aquaJade text-white py-2 px-4 rounded-full uppercase text-sm ease-in-out duration-300;
+  }
+}
+@tailwind utilities;

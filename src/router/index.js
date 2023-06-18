@@ -7,6 +7,7 @@ import i18n from "../i18n";
 
 const router = createRouter({
   history: createWebHistory(),
+  linkActiveClass: "active",
   routes: [
     {
       path: "/:locale?", // <--- 2
