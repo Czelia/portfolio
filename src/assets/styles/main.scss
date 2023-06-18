@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display&family=Zilla+Slab&display=swap");
+@import "./variables.scss";
+//components
+@import "./components/header.scss";
+
+body {
+  font-family: $font-family-base;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
