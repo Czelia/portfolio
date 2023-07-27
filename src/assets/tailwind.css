@@ -63,19 +63,20 @@
 @tailwind components;
 
 @layer components {
+	.boxChoice {
+		@apply bg-white bg-opacity-10 flex text-white rounded-xl p-3 ease-in-out duration-300 justify-start hover:bg-opacity-30 cursor-pointer;
+	}
+	button {
+		@apply py-1 px-3 mt-4 rounded-xl text-base font-semibold ease-in-out duration-300 uppercase;
+	}
 	button.aquaJade {
-		@apply bg-aquaJade shadow-aquaJade text-darkBlue py-1 px-3 mt-4 rounded-xl  text-base font-medium ease-in-out duration-300;
+		@apply bg-aquaJade text-darkBlue hover:shadow-aquaJade;
 	}
 	button.gold {
-		@apply bg-gold  shadow-gold text-darkBlue py-1 px-3 mt-4 rounded-xl  text-base font-medium ease-in-out duration-300;
+		@apply bg-gold text-darkBlue hover:shadow-gold;
 	}
 	button.lightBlue {
-		@apply bg-lightBlue  shadow-lightBlue text-darkBlue py-1 px-3 mt-4 rounded-xl  text-base font-medium ease-in-out duration-300;
+		@apply bg-lightBlue text-darkBlue hover:shadow-lightBlue;
 	}
 }
 @tailwind utilities;
-
-/* .button {
-	height: 44px;
-	width: 161px;
-} */
