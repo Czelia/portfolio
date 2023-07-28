@@ -12,6 +12,7 @@ const router = createRouter({
     {
       path: "/:locale?", // <--- 2
       component: RouterView,
+      redirect: { name: "introduction" },
       beforeEnter: (to, from, next) => {
         const lang = to.params.locale;
         if (!["fr", "en"].includes(lang)) {
@@ -21,10 +22,11 @@ const router = createRouter({
         i18n.locale = lang;
         return next();
       },
+
       children: [
         // <--- 4
         {
-          path: "",
+          path: "introduction",
           name: "introduction",
           component: IntroductionView,
         },
