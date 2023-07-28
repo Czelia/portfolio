@@ -1,43 +1,82 @@
 @tailwind base;
 
 @layer base {
-  h1 {
-    @apply text-2xl;
-  }
-  h2 {
-    @apply text-xl;
-  }
-  h3 {
-    @apply text-base;
-  }
-  .navlinks {
-    @apply text-white opacity-70 hover:opacity-100 cursor-pointer ease-in-out duration-300 uppercase;
-  }
-  .navLinks.active {
-    @apply opacity-100;
-  }
-  .introduction {
-    @apply from-midnight to-amethyst text-white;
-  }
-  .services {
-    @apply from-grape to-plum text-white;
-  }
-  .contact {
-    @apply from-crimson to-mulberry text-white;
-  }
-  .nav-dots {
-    @apply bg-white opacity-40 block h-2 w-2 rounded-full ease-in-out duration-300 hover:bg-aquaJade hover:shadow-aquaJade hover:opacity-100 cursor-pointer;
-  }
-  .nav-dots.active {
-    @apply bg-aquaJade opacity-100 shadow-aquaJade;
-  }
+	h1 {
+		@apply text-2xl;
+	}
+	h2 {
+		@apply text-xl;
+	}
+	h3 {
+		@apply text-base;
+	}
+	.navlinks {
+		@apply text-white opacity-70 hover:opacity-100 cursor-pointer ease-in-out duration-300 uppercase;
+	}
+	.navLinks.active {
+		@apply opacity-100;
+	}
+	.introduction {
+		@apply from-midnight to-amethyst text-white;
+	}
+	.services {
+		@apply from-grape to-plum text-white;
+	}
+	.contact {
+		@apply from-crimson to-mulberry text-white;
+	}
+	.portfolio {
+		@apply from-orange to-brown text-white;
+	}
+	.nav-dots {
+		@apply bg-white opacity-40 block h-2 w-2 rounded-full ease-in-out duration-300 hover:opacity-100 cursor-pointer;
+	}
+	.nav-dots.active {
+		@apply opacity-100;
+	}
+	.introduction .nav-dots {
+		@apply hover:bg-aquaJade hover:shadow-aquaJade;
+	}
+	.introduction .nav-dots.active {
+		@apply shadow-aquaJade bg-aquaJade;
+	}
+	.portfolio .nav-dots {
+		@apply hover:bg-lightBlue hover:shadow-lightBlue;
+	}
+	.portfolio .nav-dots.active {
+		@apply bg-lightBlue shadow-lightBlue;
+	}
+	.services .nav-dots {
+		@apply hover:bg-gold hover:shadow-gold;
+	}
+	.services .nav-dots.active {
+		@apply bg-gold shadow-gold;
+	}
+	.contact .nav-dots {
+		@apply hover:bg-gold hover:shadow-gold;
+	}
+	.contact .nav-dots.active {
+		@apply bg-gold shadow-gold;
+	}
 }
 
 @tailwind components;
 
 @layer components {
-  button {
-    @apply bg-aquaJade text-white py-2 px-4 rounded-full uppercase text-sm ease-in-out duration-300;
-  }
+	.boxChoice {
+		@apply bg-white bg-opacity-10 flex text-white rounded-xl p-3 ease-in-out duration-300 justify-start hover:bg-opacity-30 cursor-pointer;
+	}
+	button {
+		@apply py-1 px-3 mt-4 rounded-xl text-base font-semibold ease-in-out duration-300 uppercase;
+	}
+	button.aquaJade {
+		@apply bg-aquaJade text-darkBlue hover:shadow-aquaJade;
+	}
+	button.gold {
+		@apply bg-gold text-darkBlue hover:shadow-gold;
+	}
+	button.lightBlue {
+		@apply bg-lightBlue text-darkBlue hover:shadow-lightBlue;
+	}
 }
 @tailwind utilities;
