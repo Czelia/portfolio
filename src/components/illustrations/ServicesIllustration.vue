@@ -1,7 +1,5 @@
 <template>
   <svg
-    width="690"
-    height="769"
     viewBox="0 0 690 769"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -511,8 +509,8 @@
               </mask>
               <g mask="url(#mask2_140_11)">
                 <g id="&#60;Clip Group&#62;_2">
-                  <g class="animatedGroup">
-                    <g class="animatedGroup">
+                  <g>
+                    <g>
                       <path
                         id="&#60;Path&#62;_59"
                         d="M322.244 236C322.244 236 308.144 231 302.044 234.2C302.044 234.2 301.244 227.9 305.644 222.4C305.644 222.4 317.844 227.7 322.244 236Z"
@@ -524,7 +522,7 @@
                         fill="#E7493E"
                       />
                     </g>
-                    <g class="animatedGroup">
+                    <g>
                       <path
                         id="&#60;Path&#62;_61"
                         d="M321.444 236.3C321.444 236.3 326.444 222.2 323.144 216.1C323.144 216.1 329.544 215.3 335.044 219.8C335.044 219.8 329.744 232 321.444 236.3Z"
@@ -637,7 +635,6 @@
           [10, -10],
           [7, -13],
           [-8, -28],
-          [10, -10],
         ],
       };
     },
@@ -656,7 +653,6 @@
         return Math.floor(Math.random() * (max - min + 1)) + min;
       },
       initAnimation(number) {
-        console.log(this.animationPositions[number]);
         // // first number between -20 and 20
         // const randomNumber1 = this.getRandomNumber(-10, 10);
         // // second number either at -20 or +20 than the first number
@@ -671,7 +667,7 @@
             yoyo: true,
             repeat: -1,
             ease: "power1.inOut",
-            delay: number * 0.2,
+            delay: number * -0.2,
           }
         );
       },
