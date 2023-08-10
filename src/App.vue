@@ -7,7 +7,7 @@
   >
     <Header class="shrink-0 h-auto" />
 
-    <div class="flex flex-1 items-center h-full">
+    <div class="flex flex-1 items-center h-full w-full">
       <RouterView class="flex-1" />
       <div class="px-5 grid gap-2">
         <router-link class="nav-dots" :to="{ name: 'introduction' }">
@@ -17,7 +17,7 @@
         </router-link>
         <router-link class="nav-dots" :to="{ name: 'contact' }"> </router-link>
       </div>
-      <div class="flex-1 self-end">
+      <div class="flex-1 self-center">
         <IntroductionIllustration v-if="$route.name === 'introduction'" />
         <ContactIllustration v-if="$route.name === 'contact'" />
         <ServicesIllustration v-if="$route.name === 'services'" />
