@@ -52,5 +52,8 @@ module.exports = {
   variants: {
     textColor: ["group-hover", "hover"],
   },
+  container: {
+    center: true,
+  },
   plugins: [],
 };

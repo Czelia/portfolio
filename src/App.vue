@@ -1,43 +1,42 @@
 <template>
   <div
     :class="
-      'w-screen px-6 h-screen bg-gradient-to-b flex flex-col items-start overflow-hidden ' +
+      'md:w-screen lg:px-6 px-2 md:px-4 h-full min-h-screen flex flex-col items-start text-white md:overflow-hidden pageview ' +
       $route.name
     "
   >
     <Header class="shrink-0 h-auto" />
-
-    <div class="flex flex-1 items-center h-full w-full">
-      <RouterView class="flex-1" />
-      <div class="px-5 grid gap-2">
-        <router-link class="nav-dots" :to="{ name: 'introduction' }">
-        </router-link>
-        <router-link class="nav-dots" :to="{ name: 'services' }"> </router-link>
-        <router-link class="nav-dots" :to="{ name: 'portfolio' }">
-        </router-link>
-        <router-link class="nav-dots" :to="{ name: 'contact' }"> </router-link>
-      </div>
-      <div class="flex-1 self-center">
-        <IntroductionIllustration v-if="$route.name === 'introduction'" />
-        <ContactIllustration v-if="$route.name === 'contact'" />
-        <ServicesIllustration v-if="$route.name === 'services'" />
-      </div>
-    </div>
+    <router-view v-slot="{ Component }">
+      <transition
+        mode="out-in"
+        name="slide"
+        :duration="{ enter: 500, leave: 400 }"
+      >
+        <component :is="Component" :key="$route.path" />
+      </transition>
+    </router-view>
   </div>
 </template>
 
 <script>
-  import IntroductionIllustration from "./components/illustrations/IntroductionIllustration.vue";
-  import ServicesIllustration from "./components/illustrations/ServicesIllustration.vue";
-  import ContactIllustration from "./components/illustrations/ContactIllustration.vue";
   import Header from "./components/Header.vue";
   export default {
     name: "App",
     components: {
       Header,
-      IntroductionIllustration,
-      ServicesIllustration,
-      ContactIllustration,
+    },
+    watch: {
+      $route(to) {
+        if (to.name === "introduction") {
+          document.body.style.backgroundColor = "#0f0f0f";
+        } else if (to.name === "services") {
+          document.body.style.backgroundColor = "#0f0f0f";
+        } else if (to.name === "portfolio") {
+          document.body.style.backgroundColor = "#0f0f0f";
+        } else if (to.name === "contact") {
+          document.body.style.backgroundColor = "#0f0f0f";
+        }
+      },
     },
   };
 </script>
